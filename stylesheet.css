@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-y: hidden;
+  overflow-x: auto;
+  min-width: 400px;
+}
+
+body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  width: 90%;
+  max-width: 420px;
+  min-width: 320px;
+  height: auto;
+  min-height: 450px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.formField {
+  width: 75%;
+  margin: 15px 0;
+  position: relative;
+}
+
+.formField input {
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 16px;
+  font-weight: 550;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 0 5px transparent;
+  letter-spacing: 1px;
+}
+
+.formField input::placeholder {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.formField input:hover,
+.formField input:focus {
+  box-shadow: 0 0 0 2px #333;
+}
+.formField input:focus::placeholder {
+  opacity: 1;
+}
+
+.formField span {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.formField input:focus + span,
+.formField input:valid + span {
+  transform: translateY(-42px) translateX(-5px) scale(0.95);
+  transition: 0.3s ease-in-out;
+}
+.container-button {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+  padding-bottom: 2rem;
+  border-bottom: #8481817e 2px solid;
+}
+.container-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.icon {
+  width: 100%;
+  max-width: 20px;
+  max-height: 20px;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15.3rem;
+}
+
+.toggle-password {
+  position: absolute;
+  left: 13rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.toggle-password:hover {
+  opacity: 1;
+}
+
+.btn {
+  color: white;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  width: 100%;
+  max-width: 120px;
+  margin-top: 10px;
+  margin-right: 3px;
+  margin-left: 3px;
+
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #000000;
+  transition: 0.2s ease-in-out;
+}
+
+.login:hover {
+  background-color: #151515;
+}
+
+.login:active {
+  background-color: #282828;
+}
+.create {
+  background-color: white;
+  color: black;
+}
+.create:hover {
+  background-color: #efebeb;
+}
+
+.create:active {
+  background-color: #d1d4d7;
+}
+
+.forgot-password {
+  margin-bottom: 7px;
+  width: 100%;
+  text-align: center;
+}
+
+.forgot-password a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.forgot-password a:hover {
+  color: #0a4fb6;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+  body {
+    min-width: 320px;
+  }
+
+  .container {
+    width: 90%;
+    min-width: 320px;
+  }
+
+  .formField span {
+    font-size: 14px;
+  }
+}
+.container-option {
+  font-size: 11px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333333b5;
+  margin-top: 0.6rem;
+}
+#google {
+  background-color: white;
+}
+#apple {
+  background-color: rgb(0, 0, 0);
+}
+#apple img {
+  width: 30px;
+}
+#facebook img {
+  width: 30px;
+}
+.option {
+  background-color: #0053ed;
+  font-size: 13px;
+  border-radius: 5px;
+  margin-top: 7.5px;
+  margin-bottom: 7.5px;
+  padding: 1.3rem;
+  width: 75%;
+  position: relative;
+  cursor: pointer;
+}
+.option:hover {
+  opacity: 0.9;
+}
+.option img {
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  height: auto;
+}
+small {
+  color: #0000008d;
+  margin-top: 2rem;
+  font-size: 12px;
+}
